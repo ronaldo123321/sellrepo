@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: ntech
+    url: jdbc:mysql://127.0.0.1:3306/sell?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true&&useLegacyDatetimeCode=false
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  jackson:  #如果字段返回为null 则不返回  如果返回要初始化
+    default-property-inclusion: non_empty
+server:
+  servlet:
+    context-path: /sell
+#内网穿透映射：http://jvnrpt.natappfree.cc
+
+wechat:
+  mpAppId: wxb1fd6386e0110a9a
+  mpAppSecret: 5c917fc5e7cff44252cd22c45153ae6d
+  redirectUrl: http://rch5uf.natappfree.cc/sell/wechat/userInfo
