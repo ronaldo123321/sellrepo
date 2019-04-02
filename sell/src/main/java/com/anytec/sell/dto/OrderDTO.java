@@ -4,6 +4,7 @@ import com.anytec.sell.dataobject.OrderDetail;
 import com.anytec.sell.enums.OrderStatusEnum;
 import com.anytec.sell.enums.PayStatusEnum;
 import com.anytec.sell.utils.Date2LongSerizlizer;
+import com.anytec.sell.utils.EnumUtils;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -47,13 +48,14 @@ public class OrderDTO implements Serializable {
 
     private List<OrderDetail> orderDetailList;
 
-//    @JsonIgnore//对象转换为json时自动忽略该字段
-//    public OrderStatusEnum getOrderStatusEnum(){
-//        //  method(orderStatus,OrderStatusEnum)
-//    }
-//
-//    @JsonIgnore
-//    public PayStatusEnum getPayStatusEnum(){
-//
-//    }
+    @JsonIgnore//对象转换为json时自动忽略该字段
+    public OrderStatusEnum getOrderStatusEnum(){
+
+       return   EnumUtils.getByCode(orderStatus,OrderStatusEnum.class);
+    }
+
+    @JsonIgnore
+    public PayStatusEnum getPayStatusEnum(){
+        return   EnumUtils.getByCode(payStatus,PayStatusEnum.class);
+    }
 }
