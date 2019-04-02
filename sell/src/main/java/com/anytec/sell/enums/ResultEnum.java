@@ -5,6 +5,7 @@ import lombok.Getter;
 @Getter
 public enum ResultEnum {
 
+    SUCCESS(0,"成功"),
     PARAM_ERROR(1,"参数不正确"),
 
     PRODUCT_NOT_EXIST(10,"商品不存在"),
