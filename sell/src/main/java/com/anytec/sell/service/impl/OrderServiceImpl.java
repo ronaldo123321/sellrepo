@@ -89,7 +89,7 @@ public class OrderServiceImpl implements OrderService {
     public OrderDTO findOne(String orderId) {
 
         Optional<OrderMaster> master = repository.findById(orderId);
-        if(master.get() == null){
+        if(!master.isPresent()){
             throw  new SellException(ResultEnum.ORDER_NOT_EXIST);
         }
         List<OrderDetail> orderDetailList = orderDetailRepository.findByOrderId(orderId);

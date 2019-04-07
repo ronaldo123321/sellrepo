@@ -1,7 +1,9 @@
 package com.anytec.sell.exception;
 
 import com.anytec.sell.enums.ResultEnum;
+import lombok.Getter;
 
+@Getter
 public class SellException extends RuntimeException {
 
     private Integer code;

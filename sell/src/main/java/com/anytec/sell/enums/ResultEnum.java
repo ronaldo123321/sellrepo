@@ -19,6 +19,9 @@ public enum ResultEnum {
     CART_EMPTY(18,"购物车为空"),
     ORDER_OWNER_ERROR(19,"订单不属于该用户"),
     WECHAT_MP_ERROR(20,"微信网页授权错误"),
+    PRODUCT_STATUS_ERROR(21,"商品状态不正确"),
+    LOGIN_FAIL(22,"登陆失败，登陆信息不正确"),
+    LOGOUT_SUCCESS(23,"登出成功"),
     ;
 
 

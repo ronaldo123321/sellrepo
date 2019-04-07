@@ -10,14 +10,29 @@ spring:
       ddl-auto: update
     database: mysql
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-  jackson:  #如果字段返回为null 则不返回  如果返回要初始化
+  jackson:
     default-property-inclusion: non_empty
+  redis:
+    host: 127.0.0.1
+    port: 6379
 server:
   servlet:
     context-path: /sell
-#内网穿透映射：http://jvnrpt.natappfree.cc
+
 
 wechat:
-  mpAppId: wxb1fd6386e0110a9a
-  mpAppSecret: 5c917fc5e7cff44252cd22c45153ae6d
+  mpAppId: wxb1fd6386xxxxxxx
+  mpAppSecret: 5c917fc5e7cff4425xxxxxxxxxxxxxx
   redirectUrl: http://rch5uf.natappfree.cc/sell/wechat/userInfo
+  openAppId: wxdeh219hd29dad
+  openAppSecret: 91a8219daadh21219cauda
+
+projecturl:
+  wxchatMpAuthorize: http://rch5uf.natappfree.cc
+  wxchatOpenAuthorize: http://rch5uf.natappfree.cc
+  sell: http://127.0.0.1:8080
+
+#寮�鍙戠幆澧冮厤缃棩蹇楃骇鍒紝渚夸簬瀹氫綅璋冭瘯閿欒
+logging:
+  level:
+    com.anytec.sell.dataobject.mapper: trace

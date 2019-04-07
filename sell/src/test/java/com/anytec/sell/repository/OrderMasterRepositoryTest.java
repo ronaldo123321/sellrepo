@@ -33,11 +33,11 @@ public class OrderMasterRepositoryTest {
     @Test
     public void save(){
         OrderMaster orderMaster = new OrderMaster();
-        orderMaster.setOrderId("123457");
+        orderMaster.setOrderId("12345712");
         orderMaster.setBuyerOpenid("kevin123");
         orderMaster.setBuyerName("大师兄1");
         orderMaster.setBuyerPhone("18927890923");
-        orderMaster.setBuyerAddress("上海");
+        orderMaster.setBuyerAddress("山东");
         orderMaster.setOrderAmount(new BigDecimal(1.3));
         OrderMaster save = repository.save(orderMaster);
         Assert.assertNotNull(save);
