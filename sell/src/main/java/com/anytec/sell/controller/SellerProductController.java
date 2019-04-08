@@ -9,6 +9,8 @@ import com.anytec.sell.service.ProductService;
 import com.anytec.sell.utils.KeyUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
@@ -92,6 +94,8 @@ public class SellerProductController {
 
 
     @PostMapping("/save")
+    @CacheEvict(value = "product",key = "123")//执行方法完毕后删除缓存
+    //@CachePut(value = "product",key = "123")//每次执行完毕后 都会更新缓存
     public ModelAndView save(@Valid ProductForm form, BindingResult bindingResult,Map<String,Object>map){
         if(bindingResult.hasErrors()){
             map.put("msg",bindingResult.getFieldError().getDefaultMessage());

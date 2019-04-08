@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: ntech
+    url: jdbc:mysql://127.0.0.1:3306/sell?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true&&useLegacyDatetimeCode=false
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  jackson:
+    default-property-inclusion: non_empty
+  redis:
+    host: 127.0.0.1
+    port: 6379
+server:
+  servlet:
+    context-path: /sell
+
+
+wechat:
+  mpAppId: wxb1fd6386xxxxxxx
+  mpAppSecret: 5c917fc5e7cff4425xxxxxxxxxxxxxx
+  redirectUrl: http://rch5uf.natappfree.cc/sell/wechat/userInfo
+  openAppId: wxdeh219hd29dad
+  openAppSecret: 91a8219daadh21219cauda
+
+projecturl:
+  wxchatMpAuthorize: http://rch5uf.natappfree.cc
+  wxchatOpenAuthorize: http://rch5uf.natappfree.cc
+  sell: http://127.0.0.1:8080
+
+#开发环境配置日志级别，便于定位调试错误
+logging:
+  level:
+    com.anytec.sell.dataobject.mapper: trace

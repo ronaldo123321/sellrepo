@@ -6,6 +6,9 @@ import java.io.Serializable;
 
 @Data
 public class ResultVO<T> implements Serializable {
+
+
+    private static final long serialVersionUID = -726329868185626609L;
     /**
      * 错误吗
      */

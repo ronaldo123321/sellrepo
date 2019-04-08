@@ -56,6 +56,7 @@ public class SellerUserController {
         //3.设置token到cookie
         CookieUtil.set(response,RedisConstant.TOKEN,token,expire);
 
+        //重定向到一个绝对路径
         return new ModelAndView("redirect:"+ projectUrl.getSell()+"/sell/seller/order/list");
     }
 

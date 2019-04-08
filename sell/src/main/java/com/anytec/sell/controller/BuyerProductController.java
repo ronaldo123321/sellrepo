@@ -10,6 +10,7 @@ import com.anytec.sell.service.ProductService;
 import com.anytec.sell.utils.ResultVOUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,6 +33,7 @@ public class BuyerProductController {
 
 
     @GetMapping("/list")
+    @Cacheable(cacheNames = "product",key = "123")
     public ResultVO getBuyerProduct(){
         //1.选择已上架的商品
         List<ProductInfo> productInfos = productService.findUpAll();
@@ -57,12 +59,6 @@ public class BuyerProductController {
             productVO.setProductInfoVOList(productInfoVOList);
             productVOS.add(productVO);
         }
-
-//        ResultVO resultVO = new ResultVO();
-//        resultVO.setCode(0);
-//        resultVO.setMsg("success");
-//        resultVO.setDate(productVOS);
-
 
         return ResultVOUtils.success(productVOS);
     }

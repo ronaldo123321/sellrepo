@@ -9,6 +9,9 @@ import java.util.List;
 @Data
 public class ProductVO implements Serializable {
 
+
+    private static final long serialVersionUID = 4739177557164768913L;
+
     @JsonProperty("name")
     private String categoryName;
 
