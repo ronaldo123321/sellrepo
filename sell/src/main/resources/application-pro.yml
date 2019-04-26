@@ -22,13 +22,13 @@ server:
 wechat:
   mpAppId: wxb1fd6386xxxxxxx
   mpAppSecret: 5c917fc5e7cff4425xxxxxxxxxxxxxx
-  redirectUrl: http://rch5uf.natappfree.cc/sell/wechat/userInfo
-  openAppId: wxdeh219hd29dad
-  openAppSecret: 91a8219daadh21219cauda
+  redirectUrl: http://www.natappfree.ccfd/sell/wechat/userInfo
+  openAppId: wxsdeh21wq9hddda29dadsg
+  openAppSecret: 9a1a8w219dfaaadh21219cauda
 
 projecturl:
-  wxchatMpAuthorize: http://rch5uf.natappfree.cc
-  wxchatOpenAuthorize: http://rch5uf.natappfree.cc
+  wxchatMpAuthorize: http://www.natappfree.ccfd
+  wxchatOpenAuthorize: http://www.natappfree.ccfd
   sell: http://127.0.0.1:8080
 
 #开发环境配置日志级别，便于定位调试错误
