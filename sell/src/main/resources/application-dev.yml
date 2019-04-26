@@ -23,9 +23,9 @@ server:
 wechat:
   mpAppId: wxb1fd6386xxxxxxx
   mpAppSecret: 5c917fc5e7cff4425xxxxxxxxxxxxxx
-  redirectUrl: http://rch5uf.natappfree.cc/sell/wechat/userInfo
-  openAppId: wxdeh219hd29dad
-  openAppSecret: 91a8219daadh21219cauda
+  redirectUrl: http://www.natappfree.ccfd/sell/wechat/userInfo
+  openAppId: wxdeeqqh219hd2dhabca9dad
+  openAppSecret: 91aqwq8219daadadaadh21219cauda
 
 projecturl:
   wxchatMpAuthorize: http://rch5uf.natappfree.cc
